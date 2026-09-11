@@ -1,0 +1,31 @@
+{
+  "name": "comparecode",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Compare code and find changes, entirely in your browser. Nothing is ever sent anywhere.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "audit:offline": "node scripts/audit-bundle.mjs dist",
+    "verify": "npm run typecheck && npm run test && npm run build && npm run audit:offline"
+  },
+  "dependencies": {
+    "preact": "^10.29.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2",
+    "acorn": "^8.15.0",
+    "acorn-walk": "^8.3.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.0"
+  }
+}
